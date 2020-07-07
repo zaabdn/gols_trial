@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GOLS #tagline</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+</head>
+<body>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		header {
+			height: 40px;
+			width: 100%;
+			background-color: #FFEE00;
+			position :fixed;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			top: 0;
+			z-index: 10;
+		}
+
+		.header-left {
+			float: left;
+			margin: 8px 10px;
+		}
+
+		.header-left img {
+			width: 80px;
+		}
+
+		.search {
+			margin-top: 20px;
+			width: 90%;
+			padding: 12px 10px;
+			box-sizing: border-box;
+			font-size: 18px;
+			border: 0;
+			border-radius: 20px;
+			background-color: #ebebeb;
+		}
+
+		.top-wrapper {
+			display: flex;
+			background-color: #fff;
+			background-clip: border-box;
+			border-radius: 0.25rem;
+			margin-bottom: 20px;
+			box-shadow: 4px 4px 6px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 20px;
+			margin: 20px 20px;
+		}
+
+		.top-wrapper h1 {
+			font-size: 45px;
+			letter-spacing: 2px;
+			margin-bottom: 10px;
+		}
+
+		.top-wrapper p {
+			margin-bottom: 3px;
+		}
+
+		.top-name {
+			width: 50%;
+			padding: 0 15px;
+			margin: 0 auto;
+		}
+
+		.btn {
+			padding: 12px 24px;
+			color: black;
+			display: inline-block;
+			opacity: 0.8;
+			border-radius: 15px;
+			text-align: center;
+			border:0;
+		}
+
+		.btn:hover {
+			opacity: 1;
+		}
+
+		.topup {
+			background-color: #ffee00;
+			margin: 20px;
+		}
+
+		.lesson-wrapper {
+			padding-top: 10px;
+			padding-left: 5%;
+			padding-right: 5%;
+			background-color: #f7f7f7;
+			text-align: center;
+			display: flex;
+			margin: 0 auto;
+		}
+
+		.grid{
+			background-color:#09aadf;
+			border-radius:15px;
+			display:inline-block;
+			margin-right:10px;
+		}
+
+		.menu {
+			width: 23%; 
+			/*padding: 15px 0 0; */
+			max-height: 200px;
+			margin: 10px 0.5%;
+		}
+
+		.lesson-icon {
+			position: relative;
+		}
+
+		.lesson-icon img {
+			margin: 10px;
+		}
+
+		.lesson-icon p {
+			position: absolute;
+			top: 44%;
+			width: 100%;
+			color: white;
+		}
+
+		.text-contents {
+			width: 90%;
+			display: inline-block;
+			margin-top: 15px;
+			font-size: 30px;
+			color: white;
+		}
+
+		/*--------------------------------------------SLIDESHOW----------------------------------------*/
+		.mySlides {
+			display: none;
+		}
+		img {
+			vertical-align: middle;
+		}
+
+		.slideshow-container {
+			max-width: 1000px;
+			position: relative;
+			margin: auto;
+		}
+
+		/* Caption text */
+		.text {
+			color: #f2f2f2;
+			font-size: 15px;
+			padding: 8px 12px;
+			position: absolute;
+			bottom: 8px;
+			width: 100%;
+			text-align: center;
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+			color: #f2f2f2;
+			font-size: 12px;
+			padding: 8px 12px;
+			position: absolute;
+			top: 0;
+		}
+
+		/* The dots/bullets/indicators */
+		.dot {
+			height: 5px;
+			width: 5px;
+			margin: 0 2px;
+			background-color: #bbb;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 20s ease;
+		}
+
+		.active {
+			background-color: #717171;
+		}
+
+		/* Fading animation */
+		.fade {
+			-webkit-animation-name: translate;
+			-webkit-animation-duration: 20s;
+			animation-name: translate;
+			animation-duration: 20s;
+			transition-duration: 5s;
+		}
+
+		@-webkit-keyframes fade {
+			from {opacity: .4}
+			to {opacity: 1}
+		}
+
+		@keyframes fade {
+			from {opacity: .4}
+			to {opacity: 1}
+		}
+		/*--------------------------------------------SLIDESHOW----------------------------------------*/
+		a {
+			text-decoration: none;
+		}
+
+		.clear {
+			clear: left;
+		}
+
+		/*--------------------------------------------KATEGORI----------------------------------------*/
+		.judul-kategori {
+			margin: 10px 0 0 10px; 
+			font-weight: bolder; 
+			/*border-bottom: 1px solid #c7c7c7; */
+			max-width: 70%;
+		}
+
+		/* HORIZONTAL SCROLL */
+		.scroll-container{
+			overflow: auto;
+			white-space: nowrap;
+			margin-left: 10px;
+			margin-top: 10px;
+		}
+
+		.kategori{
+			width:40%;
+			height:150px;
+			display:inline-block;
+			margin-right:10px;
+			/*border: 1px solid #edebeb;*/
+			box-shadow: -8px -4px 8px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 8px;
+		}
+
+		.kategori img {
+			height: 150px;
+			width: 100%;
+			border-radius: 8px;
+		}
+		/*--------------------------------------------KATEGORI----------------------------------------*/
+		.search{
+			margin-top: 10px;
+		}
+
+		footer img {
+			width: 125px;
+		}
+
+		footer p {
+			color: #b3aeb5;
+			font-size: 12px;
+		}
+
+		footer {
+			padding-top: 10px;
+			height: 60px;
+			background: white;
+			width: 100%;
+			padding-bottom: 20px;
+			position: fixed;
+			z-index: 9999999;
+			bottom: 0;
+			box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+		}
+
+
+
+		/*--------------------------------------------TABLET----------------------------------------*/
+		/*--------------------------------------------TABLET----------------------------------------*/
+		/*--------------------------------------------TABLET----------------------------------------*/
+		@media all and (max-width: 1000px) {
+			.lesson {
+				width: 50%;
+				margin-bottom: 50px;
+			}
+
+			.top-wrapper h1 {
+				font-size: 32px;
+			}
+
+			.heading h2 {
+				font-size: 20px;
+			}
+
+			.text-contents {
+				text-align: center;
+				display: inline-block;
+				margin-bottom: 15px;
+				font-size: 16px;
+				color: white;
+			}
+		}
+		/*--------------------------------------------TABLET----------------------------------------*/
+		/*--------------------------------------------TABLET----------------------------------------*/
+		/*--------------------------------------------TABLET----------------------------------------*/
+
+
+		/*--------------------------------------------HANDPHONE----------------------------------------*/
+		/*--------------------------------------------HANDPHONE----------------------------------------*/
+		/*--------------------------------------------HANDPHONE----------------------------------------*/
+		@media all and (max-width: 670px) {
+			.menu {
+				width: 23%;
+				height: 80px;
+			}
+
+			.btn {
+				padding: 6px 0px;
+				color: black;
+				font-weight: bold;
+				display: inline-block;
+				opacity: 0.8;
+				border-radius: 15px;
+				text-align: center;
+				border:0;
+			}
+
+			.grid{
+				border-radius:8px;
+				display:inline-block;
+			}
+
+			.text-contents {
+				text-align: center;
+				display: inline-block;
+				font-size: 14px;
+				margin: 0 auto 10px;
+				color: white;
+			}
+
+			footer {
+				text-align: center;
+			}
+
+			.btn {
+				width: 50%;
+				height: 30px;
+			}
+
+			.top-wrapper {
+				text-align: left;
+			}
+
+			/* Tambahkan CSS untuk menu-icon */
+			.menu-icon {
+				display: block;
+			}
+
+			.top-wrapper h1 {
+				font-size: 24px;
+				line-height: 36px;
+			}
+
+			.top-wrapper p {
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+		/*--------------------------------------------HANDPHONE----------------------------------------*/
+		/*--------------------------------------------HANDPHONE----------------------------------------*/
+		/*--------------------------------------------HANDPHONE----------------------------------------*/
+	</style>
+	<header>
+		<div class="container">
+			<div class="header-left">
+				<img src="https://drive.google.com/uc?export=view&amp;id=1sXNtnsbDqXKjTuCsnLJbUrHeudrE1Inj">
+			</div>
+		</div>
+	</header><br><br>
+	<div>
+		<center><input type="text" name="search" class="search" placeholder="Search"></center>
+	</div>
+	<div class="top-wrapper">
+		<div class="top-name" style="width: 60%;">
+			<h3 style="margin-bottom: 0;">Zainal Abidin</h3>
+			<p style="margin: 0 0 5px;">Rp200.000</p>
+		</div>
+		<div class="btn-wrapper" style="width: 40%;">
+			<input type="button" name="" class="btn topup" value="TOP UP">
+		</div>
+	</div>
+	<div class="lesson-wrapper">
+		<div class="grid menu" style="background-color: #2C97DE">
+			<div class="lesson-icon">
+				<img src="https://drive.google.com/uc?export=view&amp;id=116Xgl14i9IWXG1wmS6S1_DU9WFEEjnrx" width="65%;">
+			</div>
+			<p class="text-contents">ojek</p>
+		</div>
+		<div class="grid menu" style="background-color: #2CBF6D">
+			<div class="lesson-icon">
+				<img src="https://drive.google.com/uc?export=view&amp;id=1CENaMsgIq_ZQCuBwq69AkHkydlDdtUPB" width="50%;">
+			</div>
+			<p class="text-contents">kurir</p>
+		</div>
+		<div class="grid menu" style="background-color: #EE4936">
+			<div class="lesson-icon">
+				<img src="https://drive.google.com/uc?export=view&amp;id=1ZjFa_9-67pNtwcWjMG8aU8dRrA5e9wKZ" width="50%;">
+			</div>
+			<p class="text-contents">taksi</p>
+		</div>
+		<div class="grid menu" style="background-color: #Ef9304;">
+			<div class="lesson-icon">
+				<img src="https://drive.google.com/uc?export=view&amp;id=19adhRSE-37qFp8IFKRQ9C6CCF6N2Gvr-" width="40%;">
+			</div>
+			<p class="text-contents">jasa</p>
+		</div>
+	</div>
+	<div class="lesson-wrapper" style="margin-top: 0px; padding-top: 0px;">
+		<div class="grid menu" style="background-color: #F34E86;">
+			<div class="lesson-icon">
+				<img src="https://drive.google.com/uc?export=view&amp;id=1Rjc8O_KeQYOF_gP0Pr_TJPEzmmMzRV7f" width="50%;">
+			</div>
+			<p class="text-contents">apotek</p>
+		</div>
+		<div class="grid menu" style="background-color: #84B547;">
+			<div class="lesson-icon">
+				<img src="https://drive.google.com/uc?export=view&amp;id=1V9DddAwcfNUc_vforbGdLADNmKYAE-6h" width="50%;">
+			</div>
+			<p class="text-contents">mlijo</p>
+		</div>
+		<div class="grid menu" style="background-color: #AA61BD;">
+			<div class="lesson-icon">
+				<img src="https://drive.google.com/uc?export=view&amp;id=12Se_ofR9V8DabrwMySZ9zjupzXWJwYJj" width="28%;">
+			</div>
+			<p class="text-contents">listrik</p>
+		</div>
+		<div class="grid menu" style="background-color: #1976d2;">
+			<div class="lesson-icon">
+				<img src="https://drive.google.com/uc?export=view&amp;id=1AVOwuDyB0JmuzT8hewFKnm0bwkrRVwiZ" width="50%;">
+			</div>
+			<p class="text-contents">H&B</p>
+		</div>
+		<div class="clear"></div>
+	</div><br>
+	<!-- <div class="slideshow-container">
+		<div class="mySlides fade">
+			<center><img src="https://drive.google.com/uc?export=view&amp;id=1D-E2nM6CXJszI1pH-AzV81hcupu8xB-m" style="width:90%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="https://drive.google.com/uc?export=view&amp;id=19ayRDaVHEKED_jMq5bLSvddFPE-7SdUf" style="width:90%"></center>
+		</div>
+
+		<div class="mySlides fade">
+			<center><img src="https://drive.google.com/uc?export=view&amp;id=17s_MDoTG0nBVNJz1TWhIjdOdtIa42x82" style="width:90%"></center>
+		</div>
+	</div>
+	<div style="text-align:center">
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+	<div class="judul-kategori" style="width: 50%;">Hiburan</div>
+	<div style="display: flex;">
+		<center>
+			<img src="https://drive.google.com/uc?export=view&amp;id=1pmk8x1GmDpB3LbxkTHXuwS9kemIkQomG" width="40%">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1NUIXcxpwnIii1kVaPep35MP-Wq10qY-l" width="40%">
+		</center>
+	</div> -->
+	<div class="judul-kategori">Makanan & Minuman</div>
+	<!-- <div style="float: right; width: 30%; font-size: 12px; color: #ffee00; text-align: right; margin-bottom: 20px;">lihat semua</div> -->
+	<div class="scroll-container">
+		<div class="kategori" style="margin-left: 20px;">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1RoILFPDKBNcpycE0OxsIIwC6_WmJiGbV" width="100%">
+			<p>Bakso</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1HSNEbWOGmRB4teF6_ke8u80P9J5s32Li" width="100%">
+			<p>Resto</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1YM65oONd69wL86zc1OClWXJadC4t7H81" width="100%">
+			<p>Tahu Tek</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1FINg4d4BVGCPHxZY0osgloLNIweIjk3q" width="100%">
+			<p>Sate</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1fVkR37g8aJSAMsG_mvIy0pk3YeoxoGjG" width="100%">
+			<p>Camilan</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1nASKkFjyZ2UCcnDqYuab_msAHU5-tpFs" width="100%">
+			<p>Es Campur</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1gwQSK28WC2LgXh4yFPbbeP4zOUR3ryLL" width="100%">
+			<p>Es Dawet</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1elwqgoBNwNl2xutOu3PNH_p9AbYC1KVw" width="100%">
+			<p>Es Legen</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1ajnn7ORCC2cjkclQbudrx7bGZyeAEwUU" width="100%">
+			<p>Jus</p>
+		</div>
+	</div>
+	<div class="judul-kategori" style="width: 21%;">Pakaian</div>
+	<div class="scroll-container">
+		<div class="kategori" style="margin-left: 20px;">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1basDgVWaLsPEzAS1tySsAtq8L85jppYj" width="100%">
+			<p>Anak</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1IpERv7vxnY74E1EL6U19p4n1omMm9Mx6" width="100%">
+			<p>Pria</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1R9BjCh_SIPHS22xSR73OkA94aqbDZVVv" width="100%">
+			<p>Perempuan</p>
+		</div>
+	</div>
+	<div class="judul-kategori" style="width: 25%;">Aksesoris</div>
+	<div class="scroll-container">
+		<div class="kategori" style="margin-left: 20px;">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1RTCUlDtiGJenodxaKoKboyeoia4Xl2dR" width="100%">
+			<p>Topi</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1K93gC3wwLKAbH5J_e8kDG7WXukf9Q-kF" width="100%">
+			<p>Pernak-Pernik</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1EKsGrXeTOynFMw_pqaM3bfQ08L_ucSCa" width="100%">
+			<p>Masker</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1ZcjdLkmA42eui0X2NAYL35RIH8sVDmRj" width="100%">
+			<p>Sabuk</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1-4DYb8_nScJDzRmVfnVycGMfAXo3_pvK" width="100%">
+			<p>Sandal</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1YB9kKSmzI25aIXXZcbzDUUDK28vgqtA9" width="100%">
+			<p>Sepatu</p>
+		</div>
+	</div>
+	<div class="judul-kategori" style="width: 25%;">Elektronik</div>
+	<div class="scroll-container">
+		<div class="kategori" style="margin-left: 20px;">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1iF1r-xJ9XBsint_-JmQSXweI-RpvTXsm" width="100%">
+			<p>Toko Elektronik 1</p>
+		</div>
+		<div class="kategori" style="margin-left: 20px;">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1snfC9JByWKJU9sKKr46Czx7mWU3bqL4T" width="100%">
+			<p>Toko Elektronik 2</p>
+		</div>
+		<div class="kategori" style="margin-left: 20px;">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1PEETVUhWFwxBsg0WHfXQIY6VlRbY75Fy" width="100%">
+			<p>Toko Elektronik 3</p>
+		</div>
+	</div>
+	<div class="judul-kategori" style="width: 50%;">Ibu & Anak</div>
+	<div class="scroll-container">
+		<div class="kategori" style="margin-left: 20px;">
+			<img src="https://drive.google.com/uc?export=view&amp;id=15p6DAgKJJ_E19COhOnj9lzlyGrMMx5Qm">
+			<p>Mainan</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1y-YZxRsXEXAlk1Vy6Sn82v-n1HzEZDxL">
+			<p>Popok</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1NeROKwCRpC5zINbWex9gv6MUXLo4hOpg">
+			<p>Susu</p>
+		</div>
+	</div>
+	<div class="judul-kategori" style="width: 18%;">Donasi</div>
+	<div class="scroll-container">
+		<div class="kategori" style="margin-left: 20px;">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1LPUY_TEl4_CgrbfE9xZwWdxqXbOpog9Z" width="100%">
+			<p>Gereja</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1rl2-5qi3fceLJ7We7j0YqJclTfXn9Dvi" width="100%">
+			<p>Masjid</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=146nJ8e98ikvtjRMIUg6IShAzx7Dh_bPH" width="100%">
+			<p>Kelenteng</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1iDp1htCk0wPzTPEGwSkMG6henyV3nTD3" width="100%">
+			<p>Yayasan</p>
+		</div>
+		<div class="kategori">
+			<img src="https://drive.google.com/uc?export=view&amp;id=1c0cDsDrGpyBHEiWPz80gIF91-HUwN0Hj" width="100%">
+			<p>Yatim & Piatu</p>
+		</div>
+	</div>
+	<br><br><br>
+	<footer>
+		<div class="container" style="display: flex;">
+			<div class="menu-bottom" style="width: 25%; text-align: center;">
+				<i class="fa fa-home" style="color: #c7c7c7;"></i>
+				<p style="margin: 0;">Beranda</p>	
+			</div>
+			<div class="menu-bottom" style="width: 25%; text-align: center;">
+				<i class="fa fa-shopping-cart" style="color: #c7c7c7;"></i>
+				<p style="margin: 0;">Pesanan</p>	
+			</div>
+			<div class="menu-bottom" style="width: 25%; text-align: center;">
+				<i class="fa fa-comment" style="color: #c7c7c7;"></i>
+				<p style="margin: 0;">Chat</p>	
+			</div>
+			<div class="menu-bottom" style="width: 25%; text-align: center;"	>
+				<i class="fa fa-user" style="color: #c7c7c7;"></i>
+				<p style="margin: 0;">Akun</p>	
+			</div>
+		</div>
+	</footer>
+	<!-- <script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";
+				dots[slideIndex-1].className += " active";
+setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script> -->
+</body>
+</html>
