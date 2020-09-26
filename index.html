@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GOLS Gresik</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+  </head>
+  <body>
+    <style type="text/css">
+    .card-title {
+      font-size: 8px;
+      font-weight: bolder;
+    }
+    </style>
+    <div
+      class="container-lg"
+      style="
+        background-color: whitesmoke;
+        height: 100%;
+        padding: 20px;
+        padding-bottom: 100px;
+      "
+    >
+      <div class="input-group mb-3" style="z-index: 2">
+        <a href="https://jgjk.mobi/act/search/" style="width: 100%;">
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default"
+          placeholder="Cari.."
+          style="border:0;"
+        />
+      </a>
+      </div>
+      <div
+        style="
+          background-color: yellow;
+          height: 220px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+        "
+      ></div>
+      <div
+        style="margin-top: 20px; display: flex; position: relative; z-index: 2"
+      >
+        <div style="width: 90%">
+          <p style="margin-bottom: 0">Saldo anda</p>
+          <h3 style="margin: 0 0 5px">{saldo}</h3>
+        </div>
+        <a href="https://jgjk.mobi/act/topup">
+        <button
+          type="button"
+          class="btn btn-light btn-sm"
+          style="
+            border-radius: 20px;
+            min-height: 50px;
+            max-height: 50px;
+            width: 120px;
+            font-weight: bolder;
+            font-size: large;
+          "
+        >
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+        </svg>
+          Topup
+        </button>
+      </a>
+      </div>
+      <div
+        class="card"
+        style="
+          z-index: 2;
+          margin-top: 20px;
+          border-radius: 20px;
+          box-shadow: 4px 4px 6px 4px rgba(0, 0, 0, 0.1);
+        "
+      >
+        <div
+          class="card-body"
+          style="
+            display: flex;
+            flex-wrap: 1fr 1fr 1fr 1fr;
+            justify-content: center;
+          "
+        >
+          <div
+            class="card"
+            style="
+              background-color: yellow;
+              width: 20%;
+              margin-right: 25px;
+              border: 0;
+              border-radius: 15px;
+            "
+          >
+            <div class="card-body" style="padding: 7px;" align="center">
+              <a href="https://jgjk.mobi/m/5f032bee0c5fb">
+              <img
+                src="https://drive.google.com/uc?export=view&amp;id=19QWcWlafGu0LJ8e0aAakVcOI4iX_-6a4"
+                width="65%"
+              />
+              <h5 class="card-title" style="margin: 0; color: black;">ojek</h5>
+            </a>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="
+              background-color: yellow;
+              width: 20%;
+              margin-right: 25px;
+              border: 0;
+              border-radius: 15px;
+            "
+          >
+          <div class="card-body" style="padding: 7px;" align="center">
+            <a href="https://jgjk.mobi/m/5f04aa580eb0e">
+            <img
+            src="https://drive.google.com/uc?export=view&amp;id=1LAp22UsUJyR4AHSjwtrXx23iNsVdxYru"
+              width="65%"
+            />
+            <h5 class="card-title" style="margin: 0; color: black;">kurir</h5>
+          </a>
+          </div>
+          </div>
+          <div
+            class="card"
+            style="
+              background-color: yellow;
+              width: 20%;
+              margin-right: 25px;
+              border: 0;
+              border-radius: 15px;
+            "
+          >
+          <div class="card-body" style="padding: 7px;" align="center">
+            <a href="https://jgjk.mobi/m/5f04f903d0ecf">
+            <img
+            src="https://drive.google.com/uc?export=view&amp;id=1g1feCWn9ybpsMiVZWuvwh3DD4RttdO__"
+              width="65%"
+            />
+            <h5 class="card-title" style="margin: 0; color: black;">food</h5>
+            </a>
+          </div>
+          </div>
+          <div
+            class="card"
+            style="
+              background-color: yellow;
+              width: 20%;
+              border: 0;
+              border-radius: 15px;
+            "
+          >
+          <div class="card-body" style="padding: 7px;" align="center">
+            <a href="https://jgjk.mobi/p/5f1f89c0e3fd9">
+            <img
+            src="https://drive.google.com/uc?export=view&amp;id=1BRpRfTZdjdNgyRAah1U5BQSrfkdcy7Ge"
+              width="65%"
+            />
+            <h5 class="card-title" style="margin: 0; color: black;">taksi</h5>
+          </a>
+          </div>
+          </div>
+        </div>
+<!-- 
+pemisah menu atas bawah
+pemisah menu atas bawah
+pemisah menu atas bawah -->
+        <div
+          class="card-body"
+          style="
+            display: flex;
+            flex-wrap: 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            padding-top: 0;
+          "
+        >
+          <div
+            class="card"
+            style="
+              background-color: yellow;
+              width: 20%;
+              margin-right: 25px;
+              border: 0;
+              border-radius: 15px;
+            "
+          >
+            <div class="card-body" style="padding: 7px;" align="center">
+              <a href="https://jgjk.mobi/m/5f03d3a6d9db6">
+              <img
+              src="https://drive.google.com/uc?export=view&amp;id=1oFqSy8W9-3leyJeELyHWxokXUMXwZ601"
+                width="65%"
+              />
+              <h5 class="card-title" style="margin: 0; color: black;">apotek</h5>
+            </a>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="
+              background-color: yellow;
+              width: 20%;
+              margin-right: 25px;
+              border: 0;
+              border-radius: 15px;
+            "
+          >
+          <div class="card-body" style="padding: 7px;" align="center">
+            <a href="https://jgjk.mobi/m/5f03e7deb1840">
+            <img
+            src="https://drive.google.com/uc?export=view&amp;id=1eFL8f16LVD08mJk8kophASu8xZ6VThP0"
+              width="65%"
+            />
+            <h5 class="card-title" style="margin: 0; color: black;">mlijo</h5>
+          </a>
+          </div>
+          </div>
+          <div
+            class="card"
+            style="
+              background-color: yellow;
+              width: 20%;
+              margin-right: 25px;
+              border: 0;
+              border-radius: 15px;
+            "
+          >
+          <div class="card-body" style="padding: 7px;" align="center">
+            <a href="https://jgjk.mobi/m/5f050fd8dd228">
+            <img
+            src="https://drive.google.com/uc?export=view&amp;id=1y0YDNIqbpOb3AX1z5HzTDuxAmmlD2Ugl"
+              width="65%"
+            />
+            <h5 class="card-title" style="margin: 0; color: black;">eletronik</h5>
+          </a>
+          </div>
+          </div>
+          <div
+            class="card"
+            style="
+              background-color: yellow;
+              width: 20%;
+              border: 0;
+              border-radius: 15px;
+            "
+          >
+          <div class="card-body" style="padding: 7px;" align="center">
+            <a href="https://jgjk.mobi/m/5f0504c7bc651">
+            <img
+            src="https://drive.google.com/uc?export=view&amp;id=1NeqRzK19FeM12SoJrQLGXvEKYCEuStzN"
+              width="65%"
+            />
+            <h5 class="card-title" style="margin: 0; color: black;">pakaian</h5>
+          </a>
+          </div>
+          </div>
+        </div>
+        </div>
+          <div class="alert alert-warning" role="alert" style="margin-top: 20px; 
+          font-weight: bolder;" align="center">
+            Ingin gabung jadi merchant?
+            <a href="https://linktr.ee/GOLSOfficial">
+            <button type="button" class="btn btn-warning" style="font-weight: bold; margin-top: 5px;"> Klik Disini!</button>
+          </a>
+          </div>
+        <h5>Makanan & Minuman</h5>
+        <ul class="list-group list-group-horizontal" style=" overflow: auto; white-space: nowrap;">
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0">
+            <a href="https://jgjk.mobi/p/5f04fa25451d8">
+              <img src="https://i.postimg.cc/MKLDPLRM/resto.jpg" width="100%" height="130px">
+            <p style="padding: 5px 0 10px 5px; margin-bottom: 0; color: black;">Resto</p>
+            </a>
+          </li>
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0">
+            <a href="https://jgjk.mobi/p/5f04fa6dcd359">
+              <img src="https://i.postimg.cc/RhVRy5Xf/bakso-compress8.jpg" width="100%" height="130px">
+              <p style="padding: 5px 0 10px 5px; margin-bottom: 0; color: black;">Bakso</p>
+            </a>
+          </li>
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0">
+            <a href="https://jgjk.mobi/p/5f04fae8ab6b0">
+              <img src="https://i.postimg.cc/LXvkzQ2s/tahutek-compress17.jpg" width="100%" height="130px">
+              <p style="padding: 5px 0 10px 5px; margin-bottom: 0; color: black;">Tahu Tek</p>
+            </a>
+          </li>
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0">
+            <a href="https://jgjk.mobi/p/5f04fe032efbc">
+              <img src="https://i.postimg.cc/XY5PydGG/Resep-Nasi-Goreng-Rendang-compress63.jpg" width="100%" height="130px">
+              <p style="color:black; padding: 5px 0 10px 5px; margin-bottom: 0">Nasi Goreng</p>
+            </a>
+          </li>
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0"> 
+            <a href="https://jgjk.mobi/p/5f04fb58caf08">
+              <img src="https://i.postimg.cc/JhZPBQsy/sate.jpg" width="100%" height="130px">
+              <p style="padding: 5px 0 10px 5px; margin-bottom: 0; color: black;">Sate</p>
+            </a>
+          </li>
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0"> 
+            <a href="https://jgjk.mobi/p/5f04fbac5b280">
+              <img src="https://i.postimg.cc/TwxQjWbt/camilan.jpg" width="100%" height="130px">
+              <p style="padding: 5px 0 10px 5px; margin-bottom: 0; color: black;">Camilan</p>
+          </a>
+          </li>
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0"> 
+            <a href="https://jgjk.mobi/p/5f04fc10be02b">
+              <img  src="https://i.postimg.cc/7YSs59Jb/Screenshot-20200728-140554-compress52.jpg" width="100%" height="130px">
+              <p style="padding: 5px 0 10px 5px; margin-bottom: 0; color: black;">Hangat</p>
+            </a>
+          </li>
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0"> 
+            <a href="https://jgjk.mobi/p/5f04fe56bf548"/a>
+              <img src="https://i.postimg.cc/GmsjZjJM/campur-01-compress72.jpg" width="100%" height="130px">
+              <p style="padding: 5px 0 10px 5px; margin-bottom: 0; color: black;">Dingin</p>
+            </a>
+          </li>
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0"> 
+            <a href="https://jgjk.mobi/p/5f04fe868749d"/a>
+              <img src="https://i.postimg.cc/X7qLgWZ6/jus-01-compress72.jpg" width="100%" height="130px">
+              <p style="padding: 5px 0 10px 5px; margin-bottom: 0; color: black;">Jus</p>
+            </a>
+          </li>
+        </ul>
+        
+        <h5 style="margin-top: 20px;">Aksesoris</h5>
+        <ul class="list-group list-group-horizontal" style=" overflow: auto; white-space: nowrap;">
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0">
+            <a href="https://jgjk.mobi/p/5f05099371600">
+              <img src="https://i.postimg.cc/4NysGY07/topi.jpg" width="100%" height="130px">
+            <p style="padding: 5px 0 10px 5px; margin-bottom: 0; color: black;">Topi/Songkok</p>
+            </a>
+            </a>
+          </li>
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0">
+              <a href="https://jgjk.mobi/p/5f0509d261241">
+                <img src="https://i.postimg.cc/TPVX0gKS/pernakpernik.jpg" width="100%" height="130px">
+                <p style="padding: 5px 0 10px 5px; margin-bottom: 0; color: black;">Pernak-Pernik</p>
+              </a>
+            </a>
+          </li>
+          <li class="list-group-item" style="margin-right: 3px; min-width: 30%; padding:0">
+              <a href="https://jgjk.mobi/p/5f050c93c553e"/a>
+              <img src="https://i.postimg.cc/KvWF8ZX9/sepatu.jpg" width="100%" height="130px">
+              <p style="padding: 5px 0 10px 5px; margin-bottom: 0; color: black;">Sepatu</p>
+              </a>
+            </a>
+          </li>
+        </ul>
+
+        
+        <div class="elfsight-app-403ef013-b7ba-421d-9527-61af3ed5ed5b" style="position: relative;
+      background-color: whitesmoke; margin-top: 20px;">
+      </div>
+      
+      </div>
+      <footer>
+        <div style="display: flex; padding: 10px 0; position: fixed; bottom: 0; background-color: white; width: 100%; z-index: 99;">
+          <div class="menu-bottom" style="width: 25%; text-align: center">
+            <a href="https://jgjk.mobi/m/5ed8e37e7fa49">
+              <svg width="1em" style="color: gray;" height="1em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+              </svg>
+              <p style="margin: 0; color: black;">beranda</p>
+            </a>
+          </div>
+          <div class="menu-bottom" style="width: 25%; text-align: center">
+            <a href="https://jgjk.mobi/act/cart">
+            <svg width="1em" style="color: gray;" height="1em" viewBox="0 0 16 16" class="bi bi-cart-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+            </svg>
+            <p style="margin: 0; color: black;">pesanan</p>
+          </a>
+          </div>
+          <div class="menu-bottom" style="width: 25%; text-align: center">
+            <a href="https://jgjk.mobi/act/nearme/">
+              <svg width="1em" style="color: gray;" height="1em" viewBox="0 0 16 16" class="bi bi-cursor-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"/>
+              </svg>
+            <p style="margin: 0; color: black;">terdekat</p>
+          </a>
+          </div>
+          <div class="menu-bottom" style="width: 25%; text-align: center">
+            <a href="https://jgjk.mobi/act/account">
+            <svg width="1em" style="color: gray;" height="1em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+            <p style="margin: 0; color: black;">akun</p>
+          </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
